@@ -20,113 +20,76 @@
     --brain:#0f766e;      /* tier 3 */
   }
   *{box-sizing:border-box;margin:0;padding:0;}
-  html{scroll-behavior:smooth;}
   body{
     font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
     background:var(--bg);
     color:var(--ink);
-    line-height:1.6;
-    font-size:19px;
+    line-height:1.55;
+    font-size:18px;
     -webkit-text-size-adjust:100%;
   }
-  .wrap{max-width:680px;margin:0 auto;padding:22px 18px 80px;}
+  .wrap{max-width:680px;margin:0 auto;padding:22px 18px 70px;}
 
   /* ---------- Header ---------- */
-  header{text-align:center;padding:14px 0 8px;}
-  header .robot{font-size:54px;line-height:1;}
-  h1{font-size:30px;font-weight:800;margin:6px 0 4px;letter-spacing:-.01em;}
-  header p{color:var(--soft);font-size:18px;}
-
-  /* ---------- Jump buttons ---------- */
-  .jump{display:flex;flex-direction:column;gap:10px;margin:22px 0;}
-  .jump a{
-    display:flex;align-items:center;gap:12px;text-decoration:none;
-    background:var(--card);border:2px solid var(--line);border-radius:14px;
-    padding:14px 16px;color:var(--ink);font-weight:700;font-size:18px;
-  }
-  .jump a .dot{width:14px;height:14px;border-radius:50%;flex:none;}
-  .jump a .sub{font-weight:500;color:var(--soft);font-size:15px;display:block;}
-  .jump a .arrow{margin-left:auto;color:var(--soft);font-size:22px;}
+  header{text-align:center;padding:6px 0 4px;}
+  header .robot{font-size:48px;line-height:1;}
+  h1{font-size:28px;font-weight:800;margin:6px 0 4px;letter-spacing:-.01em;}
+  header p{color:var(--soft);font-size:17px;}
 
   /* ---------- Section headings ---------- */
-  .tier{margin:34px 0 14px;}
+  .tier{margin:30px 0 8px;}
   .tier .label{
-    display:inline-block;color:#fff;font-weight:800;font-size:14px;
-    text-transform:uppercase;letter-spacing:.05em;padding:5px 12px;border-radius:999px;
+    display:inline-block;color:#fff;font-weight:800;font-size:13px;
+    text-transform:uppercase;letter-spacing:.05em;padding:4px 11px;border-radius:999px;
   }
-  .tier h2{font-size:23px;margin:10px 0 4px;}
-  .tier p{color:var(--soft);font-size:17px;}
+  .tier h2{font-size:22px;margin:9px 0 3px;}
+  .tier p{color:var(--soft);font-size:16px;}
 
   /* ---------- ETF cards ---------- */
   .card{
-    background:var(--card);border:1px solid var(--line);border-radius:18px;
-    padding:20px 18px;margin:16px 0;border-top-width:7px;
+    background:var(--card);border:1px solid var(--line);border-radius:16px;
+    padding:16px 16px;margin:12px 0;border-top-width:6px;
   }
-  .ticker-row{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;}
-  .ticker{font-size:34px;font-weight:800;letter-spacing:.02em;}
-  .full{color:var(--soft);font-size:16px;font-weight:600;}
-  .oneline{font-size:18px;margin:10px 0 4px;}
+  .ticker-row{display:flex;align-items:baseline;gap:9px;flex-wrap:wrap;}
+  .ticker{font-size:30px;font-weight:800;letter-spacing:.02em;}
+  .full{color:var(--soft);font-size:15px;font-weight:600;}
+  .oneline{font-size:17px;margin:8px 0 0;}
 
-  /* fact list */
-  .facts{list-style:none;margin:14px 0 0;border-top:1px solid var(--line);}
-  .facts li{
-    display:flex;justify-content:space-between;gap:14px;
-    padding:11px 2px;border-bottom:1px solid var(--line);font-size:17px;
-  }
-  .facts .k{color:var(--soft);}
-  .facts .v{font-weight:700;text-align:right;}
+  /* compact stat line */
+  .meta{margin:10px 0 0;color:var(--soft);font-size:15px;line-height:1.5;}
+  .meta b{color:var(--ink);font-weight:700;}
+  .meta .up{color:var(--good);}
+  .meta .down{color:var(--bad);}
 
-  /* chips */
-  .chip{
-    display:inline-block;font-size:15px;font-weight:700;padding:4px 11px;
-    border-radius:999px;margin:2px 0;
-  }
-  .chip.up{background:#e3f6ec;color:var(--good);}
-  .chip.down{background:#fbe7e4;color:var(--bad);}
-  .chip.new{background:#eef1f5;color:var(--soft);}
-  .chip.low{background:#e3f6ec;color:var(--good);}
-  .chip.mid{background:#fff2dd;color:var(--warn);}
-  .chip.high-fee{background:#fbe7e4;color:var(--bad);}
-
-  /* note / risk boxes */
+  /* good / risk note */
   .note{
-    margin-top:14px;border-radius:12px;padding:12px 14px;font-size:16px;
-    display:flex;gap:10px;align-items:flex-start;
+    margin-top:11px;border:1px solid var(--line);background:#fbfcfe;
+    border-radius:11px;padding:9px 12px;font-size:15px;
   }
-  .note .ico{font-size:20px;flex:none;line-height:1.3;}
-  .note.good{background:#eafaf1;border:1px solid #bfe8cf;}
-  .note.risk{background:#fff3e6;border:1px solid #ffd9ad;}
-  .note b{display:block;margin-bottom:2px;}
+  .note div{display:flex;gap:8px;align-items:flex-start;padding:3px 0;}
+  .note .ico{flex:none;font-size:16px;line-height:1.4;}
 
-  /* ---------- At a glance ---------- */
-  .glance{margin-top:14px;}
-  .gcard{
-    background:var(--card);border:1px solid var(--line);border-radius:14px;
-    padding:14px 16px;margin:10px 0;
-  }
-  .gcard .top{display:flex;justify-content:space-between;align-items:center;}
-  .gcard .gt{font-size:22px;font-weight:800;}
-  .gcard .gd{font-size:15px;color:var(--soft);margin-top:2px;}
-  .gcard .grow{display:flex;justify-content:space-between;font-size:16px;padding:6px 0;border-top:1px solid var(--line);margin-top:8px;}
-  .gcard .grow span:first-child{color:var(--soft);}
-  .gcard .grow span:last-child{font-weight:700;}
-
-  /* ---------- Takeaways ---------- */
-  .takeaways{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:8px 18px;margin-top:16px;}
-  .takeaways .t{display:flex;gap:12px;padding:14px 0;border-bottom:1px solid var(--line);}
-  .takeaways .t:last-child{border-bottom:none;}
-  .takeaways .t .e{font-size:24px;flex:none;}
-  .takeaways .t b{display:block;font-size:18px;}
-  .takeaways .t span{font-size:16px;color:var(--soft);}
+  /* ---------- Comparison table ---------- */
+  .cmp-wrap{overflow-x:auto;margin-top:12px;}
+  .cmp{width:100%;border-collapse:collapse;font-size:15px;}
+  .cmp th,.cmp td{padding:10px 7px;text-align:right;border-bottom:1px solid var(--line);white-space:nowrap;}
+  .cmp th{font-size:12px;text-transform:uppercase;letter-spacing:.03em;color:var(--soft);}
+  .cmp th:nth-child(1),.cmp td:nth-child(1){text-align:center;width:24px;color:var(--soft);}
+  .cmp th:nth-child(2),.cmp td:nth-child(2){text-align:left;white-space:normal;}
+  .cmp .tk{font-weight:800;font-size:17px;}
+  .cmp .ty{display:block;font-size:13px;color:var(--soft);font-weight:500;}
+  .cmp .up{color:var(--good);font-weight:700;}
+  .cmp .dn{color:var(--bad);font-weight:700;}
+  .cmp .nw{color:var(--soft);font-weight:600;}
+  .order-note{font-size:14px;color:var(--soft);margin-top:10px;}
 
   /* disclaimer + footer */
   .disclaimer{
     background:#fff7e6;border:1px solid #ffe0a3;border-radius:14px;
-    padding:16px;margin:28px 0 10px;font-size:16px;
+    padding:14px 16px;margin:26px 0 10px;font-size:15px;
   }
   .disclaimer b{display:block;margin-bottom:4px;}
-  footer{text-align:center;color:var(--soft);font-size:14px;margin-top:24px;}
-  .toptier{margin-top:8px;}
+  footer{text-align:center;color:var(--soft);font-size:14px;margin-top:22px;}
 </style>
 </head>
 <body>
@@ -135,257 +98,148 @@
   <header>
     <div class="robot">🤖</div>
     <h1>Robot Funds</h1>
-    <p>A simple guide to 6 robot &amp; AI investments</p>
+    <p>6 robot &amp; AI ETFs at a glance · May 2026</p>
   </header>
 
-  <!-- JUMP MENU -->
-  <nav class="jump">
-    <a href="#pure">
-      <span class="dot" style="background:var(--pure)"></span>
-      <span>Robot-body funds
-        <span class="sub">Companies building human-shaped robots</span></span>
-      <span class="arrow">›</span>
-    </a>
-    <a href="#wide">
-      <span class="dot" style="background:var(--wide)"></span>
-      <span>All-robot funds
-        <span class="sub">Every kind of robot — factories, hospitals, more</span></span>
-      <span class="arrow">›</span>
-    </a>
-    <a href="#brain">
-      <span class="dot" style="background:var(--brain)"></span>
-      <span>AI "brain" funds
-        <span class="sub">The chips &amp; software that make robots think</span></span>
-      <span class="arrow">›</span>
-    </a>
-    <a href="#glance">
-      <span class="dot" style="background:#94a3b8"></span>
-      <span>Compare all 6 side by side
-        <span class="sub">Quick at-a-glance table</span></span>
-      <span class="arrow">›</span>
-    </a>
-  </nav>
-
   <!-- =================== TIER 1 =================== -->
-  <div class="tier" id="pure">
-    <span class="label" style="background:var(--pure)">Group 1</span>
-    <h2>🦿 Robot-body funds</h2>
-    <p>These buy companies that build <b>human-shaped robots</b> — the actual robots that walk and use their hands. The most focused, and the riskiest.</p>
+  <div class="tier">
+    <span class="label" style="background:var(--pure)">Group 1 · Robot-body</span>
+    <h2>🦿 Human-shaped robot makers</h2>
+    <p>The most focused — and the riskiest — bet on humanoid robots.</p>
   </div>
 
   <!-- BOTT -->
   <div class="card" style="border-top-color:var(--pure)">
-    <div class="ticker-row">
-      <span class="ticker">BOTT</span>
-      <span class="full">Themes Humanoid Robotics</span>
+    <div class="ticker-row"><span class="ticker">BOTT</span><span class="full">Themes Humanoid Robotics</span></div>
+    <p class="oneline">Oldest and cheapest pure humanoid fund — mostly Korea/China names, plus Tesla.</p>
+    <p class="meta"><b class="up">+37% this yr</b> · <b>0.35%</b> fee (cheapest) · <b>$32M</b> · since 2024 · 41 holdings · automatic</p>
+    <div class="note">
+      <div><span class="ico">👍</span><span>Cheapest pure-humanoid bet, with the longest track record of this group.</span></div>
+      <div><span class="ico">⚠️</span><span>Heavy in Chinese &amp; Korean names — exposed to tariffs and trade disputes.</span></div>
     </div>
-    <p class="oneline">The <b>oldest and cheapest</b> pure robot-body fund. Mostly companies in Korea and China, plus Tesla.</p>
-    <div>
-      <span class="chip up">↑ +37% this year</span>
-      <span class="chip low">Cheapest fee</span>
-    </div>
-    <ul class="facts">
-      <li><span class="k">Yearly fee</span><span class="v">0.35% &nbsp;(very low)</span></li>
-      <li><span class="k">Started</span><span class="v">April 2024</span></li>
-      <li><span class="k">Fund size</span><span class="v">$32 million&nbsp;(small)</span></li>
-      <li><span class="k">How it's run</span><span class="v">Automatic list</span></li>
-      <li><span class="k">Companies owned</span><span class="v">41</span></li>
-    </ul>
-    <div class="note good"><span class="ico">👍</span><span><b>Why people like it</b>The cheapest way to bet purely on human-shaped robots, and it has the longest track record of this group.</span></div>
-    <div class="note risk"><span class="ico">⚠️</span><span><b>The risk</b>Heavily invested in Chinese and Korean companies. Trade disputes or new tariffs could hurt it.</span></div>
   </div>
 
   <!-- HUMN -->
   <div class="card" style="border-top-color:var(--pure)">
-    <div class="ticker-row">
-      <span class="ticker">HUMN</span>
-      <span class="full">Roundhill Humanoid Robotics</span>
+    <div class="ticker-row"><span class="ticker">HUMN</span><span class="full">Roundhill Humanoid Robotics</span></div>
+    <p class="oneline">The only fund where experts hand-pick the holdings — a confident, Tesla-led bet on robot <i>makers</i>.</p>
+    <p class="meta"><b class="nw">Too new for a yearly return</b> · <b>0.75%</b> fee (high) · <b>$73M</b> · since 2025 · 41 holdings (68% ex-US) · experts pick</p>
+    <div class="note">
+      <div><span class="ico">👍</span><span>Active managers adjust the picks instead of tracking a fixed list.</span></div>
+      <div><span class="ico">⚠️</span><span>Priciest of the focused funds, and heavy in Chinese &amp; Korean names.</span></div>
     </div>
-    <p class="oneline">The only fund where <b>experts hand-pick</b> the companies. A confident bet on robot makers, led by Tesla.</p>
-    <div>
-      <span class="chip new">Too new to show a yearly return</span>
-    </div>
-    <ul class="facts">
-      <li><span class="k">Yearly fee</span><span class="v">0.75% &nbsp;(high)</span></li>
-      <li><span class="k">Started</span><span class="v">June 2025</span></li>
-      <li><span class="k">Fund size</span><span class="v">$73 million</span></li>
-      <li><span class="k">How it's run</span><span class="v">Hands-on (experts choose)</span></li>
-      <li><span class="k">Companies owned</span><span class="v">41 &nbsp;(68% outside USA)</span></li>
-      <li><span class="k">Biggest holding</span><span class="v">Tesla (8.5%)</span></li>
-    </ul>
-    <div class="note good"><span class="ico">👍</span><span><b>Why people like it</b>Real experts adjust the picks over time, instead of just following a fixed list. A strong bet that robot <i>makers</i> will win.</span></div>
-    <div class="note risk"><span class="ico">⚠️</span><span><b>The risk</b>The most expensive fee of the focused funds, and lots of Chinese &amp; Korean companies.</span></div>
   </div>
 
   <!-- KOID -->
   <div class="card" style="border-top-color:var(--pure)">
-    <div class="ticker-row">
-      <span class="ticker">KOID</span>
-      <span class="full">KraneShares Humanoid &amp; Physical AI</span>
+    <div class="ticker-row"><span class="ticker">KOID</span><span class="full">KraneShares Humanoid &amp; Physical AI</span></div>
+    <p class="oneline">Biggest body fund — and a twist: it buys robot <i>parts</i> makers (motors, sensors, chips), not the robots.</p>
+    <p class="meta"><b class="nw">Too new for a yearly return</b> · <b>0.69%</b> fee · <b>$224M</b> (largest focused) · since 2025 · 60 holdings · evenly weighted</p>
+    <div class="note">
+      <div><span class="ico">👍</span><span>"Sell shovels" — bets on parts every robot needs, spread evenly so no name can sink it.</span></div>
+      <div><span class="ico">⚠️</span><span>Misses out if one robot <i>brand</i> wins big. Holds no Tesla.</span></div>
     </div>
-    <p class="oneline">The <b>biggest</b> robot-body fund. A clever twist: it buys the companies that make robot <b>parts</b> — motors, sensors and chips — not the robots themselves.</p>
-    <div>
-      <span class="chip new">Too new to show a yearly return</span>
-      <span class="chip low">Biggest of the focused funds</span>
-    </div>
-    <ul class="facts">
-      <li><span class="k">Yearly fee</span><span class="v">0.69%</span></li>
-      <li><span class="k">Started</span><span class="v">June 2025</span></li>
-      <li><span class="k">Fund size</span><span class="v">$224 million&nbsp;(largest here)</span></li>
-      <li><span class="k">How it's run</span><span class="v">Automatic, evenly spread</span></li>
-      <li><span class="k">Companies owned</span><span class="v">60</span></li>
-    </ul>
-    <div class="note good"><span class="ico">👍</span><span><b>Why people like it</b>"In a gold rush, sell shovels." It bets on the parts every robot needs, no matter which robot company wins. Money is spread evenly, so no single company can sink it.</span></div>
-    <div class="note risk"><span class="ico">⚠️</span><span><b>The risk</b>If a famous robot <i>brand</i> becomes a huge success, this fund may miss out — it owns the parts makers, not the brand. It does not hold Tesla.</span></div>
   </div>
 
   <!-- =================== TIER 2 =================== -->
-  <div class="tier" id="wide">
-    <span class="label" style="background:var(--wide)">Group 2</span>
-    <h2>🦾 All-robot funds</h2>
-    <p>These buy <b>every kind of robot</b> — factory arms, hospital surgery robots, warehouse machines, and some human-shaped robots too. Bigger, safer, and easier to buy and sell.</p>
+  <div class="tier">
+    <span class="label" style="background:var(--wide)">Group 2 · All-robot</span>
+    <h2>🦾 Every kind of robot</h2>
+    <p>Factory, surgical and warehouse robots plus some humanoids — bigger, steadier, easier to trade.</p>
   </div>
 
   <!-- BOTZ -->
   <div class="card" style="border-top-color:var(--wide)">
-    <div class="ticker-row">
-      <span class="ticker">BOTZ</span>
-      <span class="full">Global X Robotics &amp; AI</span>
+    <div class="ticker-row"><span class="ticker">BOTZ</span><span class="full">Global X Robotics &amp; AI</span></div>
+    <p class="oneline">The largest and most liquid robot fund — big, established names, led by NVIDIA.</p>
+    <p class="meta"><b class="down">−2% this yr</b> · <b>0.68%</b> fee · <b>$3.7B</b> (huge) · since 2016 · 52 holdings · automatic</p>
+    <div class="note">
+      <div><span class="ico">👍</span><span>Steady, deeply liquid core robot exposure without going all-in on humanoids.</span></div>
+      <div><span class="ico">⚠️</span><span>Flat-to-down this year while focused funds rose — less humanoid upside.</span></div>
     </div>
-    <p class="oneline">The <b>largest and easiest to trade</b> robot fund. Owns big, established robot companies.</p>
-    <div>
-      <span class="chip down">↓ -2% this year</span>
-      <span class="chip low">Very large &amp; liquid</span>
-    </div>
-    <ul class="facts">
-      <li><span class="k">Yearly fee</span><span class="v">0.68%</span></li>
-      <li><span class="k">Started</span><span class="v">September 2016</span></li>
-      <li><span class="k">Fund size</span><span class="v">$3.7 billion&nbsp;(huge)</span></li>
-      <li><span class="k">How it's run</span><span class="v">Automatic list</span></li>
-      <li><span class="k">Companies owned</span><span class="v">52</span></li>
-      <li><span class="k">Biggest holding</span><span class="v">NVIDIA (11%)</span></li>
-    </ul>
-    <div class="note good"><span class="ico">👍</span><span><b>Why people like it</b>Big, steady, and very easy to buy or sell. Good for robot exposure without betting everything on humanoids.</span></div>
-    <div class="note risk"><span class="ico">⚠️</span><span><b>The risk</b>It has fallen slightly this year while the focused funds rose. Less excitement, fewer humanoid companies.</span></div>
   </div>
 
   <!-- ROBO -->
   <div class="card" style="border-top-color:var(--wide)">
-    <div class="ticker-row">
-      <span class="ticker">ROBO</span>
-      <span class="full">ROBO Global Robotics &amp; Automation</span>
+    <div class="ticker-row"><span class="ticker">ROBO</span><span class="full">ROBO Global Robotics &amp; Automation</span></div>
+    <p class="oneline">The original robot fund and the most diversified — your money spread across the most companies.</p>
+    <p class="meta"><b class="up">+18% this yr</b> · <b>0.95%</b> fee (highest) · <b>$1.5B</b> · since 2013 · 80 holdings (most) · automatic</p>
+    <div class="note">
+      <div><span class="ico">👍</span><span>Most diversified and lowest-drama way to own robots — 80 names, none too large.</span></div>
+      <div><span class="ico">⚠️</span><span>Highest fee in the guide, and being so spread out caps upside in a boom.</span></div>
     </div>
-    <p class="oneline">The <b>original</b> robot fund and the <b>most spread out</b> — your money is shared across the most companies.</p>
-    <div>
-      <span class="chip up">↑ +18% this year</span>
-      <span class="chip high-fee">Highest fee</span>
-    </div>
-    <ul class="facts">
-      <li><span class="k">Yearly fee</span><span class="v">0.95% &nbsp;(highest)</span></li>
-      <li><span class="k">Started</span><span class="v">October 2013</span></li>
-      <li><span class="k">Fund size</span><span class="v">$1.5 billion</span></li>
-      <li><span class="k">How it's run</span><span class="v">Automatic list</span></li>
-      <li><span class="k">Companies owned</span><span class="v">80 &nbsp;(most of any)</span></li>
-    </ul>
-    <div class="note good"><span class="ico">👍</span><span><b>Why people like it</b>The most diversified — 80 companies, none too large. The safest, lowest-drama way to own robots.</span></div>
-    <div class="note risk"><span class="ico">⚠️</span><span><b>The risk</b>The highest yearly fee in this whole guide. Being so spread out also means slower growth in a boom.</span></div>
   </div>
 
   <!-- =================== TIER 3 =================== -->
-  <div class="tier" id="brain">
-    <span class="label" style="background:var(--brain)">Group 3</span>
-    <h2>🧠 AI "brain" funds</h2>
-    <p>This buys the <b>computer chips and AI software</b> that give robots their "brains" — <b>not the robots themselves</b>. The idea: the thinking part may be worth more than the metal body.</p>
+  <div class="tier">
+    <span class="label" style="background:var(--brain)">Group 3 · AI brains</span>
+    <h2>🧠 The chips that think</h2>
+    <p>The AI chips and software behind robots — not the robots themselves.</p>
   </div>
 
   <!-- ARTY -->
   <div class="card" style="border-top-color:var(--brain)">
-    <div class="ticker-row">
-      <span class="ticker">ARTY</span>
-      <span class="full">iShares Future AI &amp; Tech</span>
-    </div>
-    <p class="oneline">The <b>best performer this year</b>. Owns the AI chip and cloud-computer companies that power all robots and AI.</p>
-    <div>
-      <span class="chip up">↑ +33% this year — best of all 6</span>
-    </div>
-    <ul class="facts">
-      <li><span class="k">Yearly fee</span><span class="v">0.47% &nbsp;(low)</span></li>
-      <li><span class="k">Started</span><span class="v">June 2018</span></li>
-      <li><span class="k">Fund size</span><span class="v">$3.1 billion&nbsp;(huge)</span></li>
-      <li><span class="k">How it's run</span><span class="v">Automatic list</span></li>
-      <li><span class="k">Companies owned</span><span class="v">71 &nbsp;(mostly tech)</span></li>
-      <li><span class="k">Top holdings</span><span class="v">AMD, Marvell, Micron</span></li>
-    </ul>
-    <div class="note good"><span class="ico">👍</span><span><b>Why people like it</b>Big, low fee, and the strongest growth this year. A bet that the AI "brains" capture the most value.</span></div>
-    <div class="note risk"><span class="ico">⚠️</span><span><b>The risk</b>This is <i>not</i> a robot fund at all — it owns no robots, only chip and software makers. A different bet than the others.</span></div>
-  </div>
-
-  <!-- =================== AT A GLANCE =================== -->
-  <div class="tier" id="glance">
-    <span class="label" style="background:#64748b">Compare</span>
-    <h2>📊 All 6, side by side</h2>
-    <p>Sorted by growth this year (best at the top).</p>
-  </div>
-
-  <div class="glance">
-    <div class="gcard" style="border-left:7px solid var(--pure)">
-      <div class="top"><span class="gt">BOTT</span><span class="chip up">↑ +37%</span></div>
-      <div class="gd">Robot-body · cheapest fee</div>
-      <div class="grow"><span>Fee</span><span>0.35%</span></div>
-      <div class="grow"><span>Fund size</span><span>$32M</span></div>
-    </div>
-    <div class="gcard" style="border-left:7px solid var(--brain)">
-      <div class="top"><span class="gt">ARTY</span><span class="chip up">↑ +33%</span></div>
-      <div class="gd">AI "brain" · best performer</div>
-      <div class="grow"><span>Fee</span><span>0.47%</span></div>
-      <div class="grow"><span>Fund size</span><span>$3.1B</span></div>
-    </div>
-    <div class="gcard" style="border-left:7px solid var(--wide)">
-      <div class="top"><span class="gt">ROBO</span><span class="chip up">↑ +18%</span></div>
-      <div class="gd">All-robot · most spread out</div>
-      <div class="grow"><span>Fee</span><span>0.95%</span></div>
-      <div class="grow"><span>Fund size</span><span>$1.5B</span></div>
-    </div>
-    <div class="gcard" style="border-left:7px solid var(--wide)">
-      <div class="top"><span class="gt">BOTZ</span><span class="chip down">↓ -2%</span></div>
-      <div class="gd">All-robot · biggest &amp; easiest to trade</div>
-      <div class="grow"><span>Fee</span><span>0.68%</span></div>
-      <div class="grow"><span>Fund size</span><span>$3.7B</span></div>
-    </div>
-    <div class="gcard" style="border-left:7px solid var(--pure)">
-      <div class="top"><span class="gt">KOID</span><span class="chip new">Too new</span></div>
-      <div class="gd">Robot-body · buys the parts</div>
-      <div class="grow"><span>Fee</span><span>0.69%</span></div>
-      <div class="grow"><span>Fund size</span><span>$224M</span></div>
-    </div>
-    <div class="gcard" style="border-left:7px solid var(--pure)">
-      <div class="top"><span class="gt">HUMN</span><span class="chip new">Too new</span></div>
-      <div class="gd">Robot-body · experts pick · most active</div>
-      <div class="grow"><span>Fee</span><span>0.75%</span></div>
-      <div class="grow"><span>Fund size</span><span>$73M</span></div>
+    <div class="ticker-row"><span class="ticker">ARTY</span><span class="full">iShares Future AI &amp; Tech</span></div>
+    <p class="oneline">Best performer of the six — owns the AI chip and cloud names powering all robots and AI.</p>
+    <p class="meta"><b class="up">+33% this yr</b> (best) · <b>0.47%</b> fee (low) · <b>$3.1B</b> (huge) · since 2018 · 71 holdings · automatic</p>
+    <div class="note">
+      <div><span class="ico">👍</span><span>Big, cheap and the strongest grower — a bet the "brains" capture the value.</span></div>
+      <div><span class="ico">⚠️</span><span>Not a robot fund — owns no robots, only chip &amp; software makers. A different bet.</span></div>
     </div>
   </div>
 
-  <!-- =================== TAKEAWAYS =================== -->
-  <div class="tier toptier">
-    <span class="label" style="background:#334155">In short</span>
-    <h2>💡 The big picture</h2>
+  <!-- =================== COMPARE =================== -->
+  <div class="tier">
+    <span class="label" style="background:#334155">Compare</span>
+    <h2>📊 All six, side by side</h2>
+    <p>Suggested order: broadest, largest and most established first → narrowest and newest last.</p>
   </div>
 
-  <div class="takeaways">
-    <div class="t"><span class="e">🛒</span><span><b>Cheapest pure robot bet</b><span>BOTT — only 0.35% a year, less than half of HUMN.</span></span></div>
-    <div class="t"><span class="e">🏆</span><span><b>Best grower this year</b><span>ARTY (+33%) and BOTT (+37%) led. BOTZ fell slightly (-2%).</span></span></div>
-    <div class="t"><span class="e">💧</span><span><b>Easiest to buy &amp; sell</b><span>The two giants: BOTZ ($3.7B) and ARTY ($3.1B).</span></span></div>
-    <div class="t"><span class="e">🛡️</span><span><b>Safest, most spread out</b><span>ROBO — 80 companies, no single big bet (but the highest fee).</span></span></div>
-    <div class="t"><span class="e">⚖️</span><span><b>Two different ideas</b><span>KOID bets on robot <i>parts</i> makers. HUMN bets on the robot <i>brands</i> themselves.</span></span></div>
-    <div class="t"><span class="e">🌏</span><span><b>Watch the politics</b><span>BOTT and HUMN hold many Chinese &amp; Korean companies — trade disputes are a real risk.</span></span></div>
-    <div class="t"><span class="e">🚀</span><span><b>Why all the excitement?</b><span>Morgan Stanley predicts human-shaped robots could be a <b>$5 trillion</b> market by 2050.</span></span></div>
+  <div class="cmp-wrap">
+    <table class="cmp">
+      <thead>
+        <tr><th>#</th><th>Fund</th><th>Fee</th><th>This yr</th><th>Size</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td style="border-left:5px solid var(--wide);padding-left:9px"><span class="tk">BOTZ</span><span class="ty">All-robot · core &amp; liquid</span></td>
+          <td>0.68%</td><td class="dn">−2%</td><td>$3.7B</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td style="border-left:5px solid var(--wide);padding-left:9px"><span class="tk">ROBO</span><span class="ty">All-robot · most diversified</span></td>
+          <td>0.95%</td><td class="up">+18%</td><td>$1.5B</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td style="border-left:5px solid var(--brain);padding-left:9px"><span class="tk">ARTY</span><span class="ty">AI brains · best grower</span></td>
+          <td>0.47%</td><td class="up">+33%</td><td>$3.1B</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td style="border-left:5px solid var(--pure);padding-left:9px"><span class="tk">BOTT</span><span class="ty">Humanoid · cheapest</span></td>
+          <td>0.35%</td><td class="up">+37%</td><td>$32M</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td style="border-left:5px solid var(--pure);padding-left:9px"><span class="tk">KOID</span><span class="ty">Humanoid · parts maker</span></td>
+          <td>0.69%</td><td class="nw">new</td><td>$224M</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td style="border-left:5px solid var(--pure);padding-left:9px"><span class="tk">HUMN</span><span class="ty">Humanoid · experts pick</span></td>
+          <td>0.75%</td><td class="nw">new</td><td>$73M</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
+  <p class="order-note">Higher up generally means broader and lower-drama; lower down means a sharper, newer bet. A starting point for your own research — not a recommendation.</p>
 
   <!-- DISCLAIMER -->
   <div class="disclaimer">
     <b>⚠️ Please remember</b>
-    This page is for <b>information only</b> — it is not financial advice. All numbers are from a research note dated May 2026 and will change over time. Investments can go down as well as up. Always speak to a trusted, qualified adviser before investing money.
+    Information only — not financial advice. All numbers are from a research note dated May 2026 and will change. Investments can go down as well as up. Speak to a qualified adviser before investing.
   </div>
 
   <footer>
