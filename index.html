@@ -7,6 +7,7 @@
 <title>Robot Funds — A Simple Guide</title>
 <style>
   :root{
+    color-scheme:light dark;
     --ink:#16202c;        /* main text */
     --soft:#52647a;       /* secondary text */
     --line:#dce3ec;       /* borders */
@@ -90,6 +91,23 @@
   }
   .disclaimer b{display:block;margin-bottom:4px;}
   footer{text-align:center;color:var(--soft);font-size:14px;margin-top:22px;}
+
+  /* ---------- Dark mode ---------- */
+  @media (prefers-color-scheme: dark){
+    :root{
+      --ink:#e7eef6;      /* main text */
+      --soft:#9aabbe;     /* secondary text */
+      --line:#28323f;     /* borders */
+      --bg:#0e131a;       /* page */
+      --card:#19212c;     /* cards */
+      --good:#3ad27f;     /* green / up (brightened for dark) */
+      --bad:#ff7367;      /* red / down */
+      --warn:#e6ac4d;     /* amber */
+      /* accent hues (pure/wide/brain) kept as-is so white-on-colour labels stay readable */
+    }
+    .note{background:#141b24;}
+    .disclaimer{background:#2c2611;border-color:#5a4a1f;}
+  }
 </style>
 </head>
 <body>
